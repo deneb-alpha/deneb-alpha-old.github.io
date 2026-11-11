@@ -2,13 +2,23 @@ GEM
   remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    activesupport (4.2.4)
-      i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
-      tzinfo (~> 1.1)
+    activesupport (8.0.5.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
     addressable (2.3.8)
+    base64 (0.3.0)
+    benchmark (0.5.0)
+    bigdecimal (4.1.3)
     blankslate (2.1.2.4)
     classifier-reborn (2.0.4)
       fast-stemmer (~> 1.0)
@@ -17,6 +27,9 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     colorator (0.1)
+    concurrent-ruby (1.3.8)
+    connection_pool (3.0.2)
+    drb (2.2.3)
     ethon (0.8.0)
       ffi (>= 1.3.0)
     execjs (2.6.0)
@@ -49,8 +62,8 @@ GEM
       typhoeus (~> 0.7)
     html-pipeline (1.9.0)
       activesupport (>= 2)
-    nokogiri ~> 1.8.1 
-    i18n (0.7.0)
+    i18n (1.15.2)
+      concurrent-ruby (~> 1.0)
     jekyll (2.4.0)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -85,27 +98,26 @@ GEM
       gemoji (~> 2.0)
       html-pipeline (~> 1.9)
       jekyll (>= 2.0)
-    json (1.8.3)
     kramdown (1.5.0)
     libv8 (3.16.14.13)
     liquid (2.6.2)
     listen (3.0.4)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    logger (1.7.0)
     maruku (0.7.0)
     mercenary (0.3.5)
-    mini_portile (0.6.2)
-    minitest (5.8.2)
+    minitest (6.1.0)
+      drb (~> 2.0)
+      prism (>= 1.5, < 3)
     net-dns (0.8.0)
-    nokogiri ~> 1.8.1 
-      mini_portile (~> 0.6.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.11)
+    prism (2.1.0)
     public_suffix (1.5.2)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
-    yajl-ruby ~> 1.3.1 
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -114,18 +126,18 @@ GEM
     ref (2.0.0)
     safe_yaml (1.0.4)
     sass (3.4.19)
+    securerandom (0.4.1)
     terminal-table (1.5.2)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
-    thread_safe (0.3.5)
     toml (0.1.2)
       parslet (~> 1.5.0)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
-    tzinfo (1.2.2)
-      thread_safe (~> 0.1)
-    yajl-ruby ~> 1.3.1
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    uri (1.1.2)
 
 PLATFORMS
   ruby
@@ -133,5 +145,5 @@ PLATFORMS
 DEPENDENCIES
   execjs
   github-pages
-  therubyracer
   redcarpet
+  therubyracer
